@@ -1,5 +1,14 @@
+/* mobile first rules
+	-these get applied rigth away as soon as the page loads 
+	-these should be your mobile-first design rules 
+	-work up gradually with media queries to adapt tp larger layouts
+*/
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	/* 1em = 16px - relative unit of mesurement*/
+
 }
 
 .container {
@@ -19,4 +28,28 @@ body {
 	text-align: center;
 	margin: 10px;
 	width: 100px;
+	font-size: 1em;
+}
+
+
+/* handling handheld / mobile @landscape */
+
+@media screen and (min-width: 480px) {
+	.box{
+		background-color: red;
+		color: #fefefe;
+		width: 150px;
+	}
+}
+
+/* tablet @ portrait */
+
+@media screen and (min-width: 768px) {
+	.box{
+		background-color: red;
+		color: #fefefe;
+		width: 150px;
+		font-size: 3em;
+	}
+
 }
